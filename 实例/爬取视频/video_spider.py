@@ -5,7 +5,7 @@ import os
 
 # 爬取梨视频某模块下的热门视频
 # 1.根据分类页找到热门视频的视频播放页链接
-# 2.再在播放页找到动态加载的(隐藏在js中)视频链接
+# 2.再在播放页找到动态加载的(隐藏在js中)视频链接（全局搜索）
 dir_name = 'video_dir'
 if not os.path.exists(dir_name):
 	os.mkdir(dir_name)

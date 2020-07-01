@@ -30,6 +30,7 @@ from lxml import etree
 	-在局部数据解析的时候，xpath表达式中要使用./的操作，./表示的就是当前的局部数据
 使xpath表达式更具有通用性：
 	- |：在xpath表达式中使用管道符( | )分割，它表示 | 两边的子xpath表达式同时生效或一个生效
+xpath中不能出现tbody标签	
 '''
 fp = open('test.html','r',encoding='utf-8')
 text = fp.read()

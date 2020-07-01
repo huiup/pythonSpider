@@ -20,11 +20,13 @@
 	-快代理
 	-西祠代理
 	-goubanJla
-	-代理精灵
+	-精灵代理
 '''
 # 添加代理(池)只需在get()中添加相应的参数即可
 import random
-url = 'https://www.test.com/'
+import requests
+
+url = 'https://www.baidu.com/'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36'
 }
@@ -37,8 +39,9 @@ for proxy in http_proxy:
     }
     http_proxy.append(dic)
 
-# 格式如下：proxies接收一个字典：proxies={'https':'111.11.22.1:2345'}
+# 格式如下：proxies接收一个字典：proxies={'http':'118.112.195.229:9999'}
 response = requests.get(url=url, headers=headers,
                         proxies=random.choice(http_proxy))
 res_text = response.text
+print(res_text)
 # ~~~
